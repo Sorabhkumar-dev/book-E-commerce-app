@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/drawable/asset.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/drawable/ic_favorite.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/drawable/ic_rating.xml" value="0.175" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/activity_splash.xml" value="0.21" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/book_card.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/book_descrption_adapter_layout.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/drawer_header.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/fragment_dashboard.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/fragment_description.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/fragment_favorite.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/layout/fragment_refresh.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/menu/drawer_menu.xml" value="0.1921875" />
+        <entry key="..\:/Users/hp/Intershala Training Program/ReaderClub/app/src/main/res/menu/menu.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="androidx.room.Query" />
+    </list>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

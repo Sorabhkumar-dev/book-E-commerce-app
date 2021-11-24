@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+<!--        <variable-->
+<!--            name="favoriteFragment"-->
+<!--            type="com.sorabh.readerclub.fragments.FavoriteFragment" />-->
+
+        <variable
+            name="bookSDescription"
+            type="com.sorabh.readerclub.retrofit.BookDescription" />
+
+        <variable
+            name="onBookDescriptionClicked"
+            type="com.sorabh.readerclub.adapter.FavoriteBookViewHolder.OnBookDescriptionClicked" />
+
+        <import type="androidx.databinding.DataBindingUtil" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="170dp"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:onClick="@{() -> onBookDescriptionClicked.onBookDescriptionClicked(bookSDescription) }"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_adapter_image"
+                imageSrcUrl="@{bookSDescription.image}"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/description_fragment_image_heading" />
+
+            <TextView
+                android:id="@+id/txt_adapter_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_adapter_image"
+                android:layout_marginStart="10dp"
+                android:text="@{bookSDescription.rating}"
+                app:drawableStartCompat="@drawable/ic_rating" />
+
+            <TextView
+                android:id="@+id/txt_adapter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_adapter_rating"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@{bookSDescription.name}" />
+
+            <TextView
+                android:id="@+id/txt_adapter_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_adapter_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@{bookSDescription.author}" />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/txt_adapter_author"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:drawableEnd="@drawable/ic_delete"
+                android:onClick="@{() ->onBookDescriptionClicked.deleteBookDescription(bookSDescription)}" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

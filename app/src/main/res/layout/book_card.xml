@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+<variable
+    name="data"
+    type="com.sorabh.readerclub.retrofit.Data" />
+    <variable
+        name="onBookItemClicked"
+        type="com.sorabh.readerclub.adapter.RecycleViewViewHolder.OnBookItemClicked" />
+
+    <import type="androidx.databinding.DataBindingUtil"/>
+</data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        android:onClick="@{() -> onBookItemClicked.onBookClicked(data)}">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_book"
+                imageSrcUrl="@{data.image}"
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/recyclerview_image_description"
+                android:layout_centerVertical="true"
+                android:src="@drawable/blue_book" />
+            <TextView
+                android:id="@+id/recyclerView_bookId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/img_book"/>
+
+            <TextView
+                android:id="@+id/bookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerView_bookId"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/img_book"
+                android:text="@{data.name}" />
+
+            <TextView
+                android:id="@+id/bookPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bookName"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/img_book"
+                android:text="@{data.price}" />
+
+            <TextView
+                android:id="@+id/recyclerView_bookRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:text="@{data.rating}"
+                app:drawableStartCompat="@drawable/ic_rating" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

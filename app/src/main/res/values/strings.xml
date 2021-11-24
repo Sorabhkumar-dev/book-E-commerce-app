@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Reader Club</string>
+    <string name="splash_screen_heading">Welcome to \n Reader Club</string>
+    <string name="drawer_header_heading">Reader Club 4 You</string>
+
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_share">Share</string>
+    <string name="action_close">close</string>
+    <string name="action_open">open</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recyclerview_image_description">book image</string>
+    <string name="description_fragment_image_heading">book image</string>
+
+
+</resources>

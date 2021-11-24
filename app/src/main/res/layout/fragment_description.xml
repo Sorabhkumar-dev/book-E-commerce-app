@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="descriptionFragment"
+            type="com.sorabh.readerclub.fragments.DescriptionFragment" />
+        <variable
+            name="bookDescription"
+            type="com.sorabh.readerclub.retrofit.BookDescription" />
+
+        <import type="androidx.databinding.DataBindingUtil"/>
+    </data>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_book_description"
+                    imageSrcUrl="@{bookDescription.image}"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/description_fragment_image_heading" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_book_description"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@{bookDescription.name}"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_authorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_name"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@{bookDescription.author}"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_book_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="@{bookDescription.price}"
+                    android:textColor="@color/teal_200"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_bookDescriptionHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rtb_book"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="cursive"
+                    android:text="@{`About this Book`}"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/txt_bookDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_bookDescriptionHeading"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="cursive"
+                    android:text="@{bookDescription.description}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/rtb_book"
+                    bookRating="@{bookDescription.rating}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_authorName"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#D2DD1C" />
+
+                <Button
+                    android:id="@+id/favorite_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_bookDescription"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:drawableEnd="@drawable/ic_favorite"
+                    android:onClick="@{() -> descriptionFragment.addToFavorite(bookDescription)}"
+                    android:padding="5dp"
+                    android:text="@{`add to favorite`}"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+</layout>

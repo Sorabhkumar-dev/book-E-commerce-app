@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single"
+        android:enabled="true">
+        <item
+            android:id="@+id/drawerDashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/drawerFavorite"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/menu_favorite" />
+        <item
+            android:id="@+id/drawerShare"
+            android:icon="@drawable/ic_share"
+            android:title="@string/menu_share" />
+    </group>
+</menu>
