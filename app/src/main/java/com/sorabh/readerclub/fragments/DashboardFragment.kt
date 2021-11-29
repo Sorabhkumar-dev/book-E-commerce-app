@@ -82,6 +82,11 @@ class DashboardFragment : Fragment(), RecycleViewViewHolder.OnBookItemClicked {
         val frag = DescriptionFragment()
         frag.arguments = args
         parentFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.enter_from_right,
+                R.anim.exit_to_left,
+                R.anim.enter_from_left,
+                R.anim.exit_to_right)
             .replace(R.id.frameLayout, frag)
             .addToBackStack("DashboardFragment")
             .commit()

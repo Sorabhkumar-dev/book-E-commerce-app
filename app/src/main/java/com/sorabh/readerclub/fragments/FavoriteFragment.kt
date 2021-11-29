@@ -68,6 +68,11 @@ class FavoriteFragment : Fragment(),
             getBookAccess.deleteBook(bookDescription)
             withContext(Dispatchers.Main) {
                 parentFragmentManager.beginTransaction()
+                    .setCustomAnimations(
+                        R.anim.enter_from_right,
+                        R.anim.exit_to_left,
+                        R.anim.enter_from_left,
+                        R.anim.exit_to_right)
                     .replace(R.id.frameLayout, FavoriteFragment()).commit()
             }
         }
@@ -76,6 +81,11 @@ class FavoriteFragment : Fragment(),
 
     override fun onBookDescriptionClicked(bookDescription: BookDescription) {
         parentFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.enter_from_right,
+                R.anim.exit_to_left,
+                R.anim.enter_from_left,
+                R.anim.exit_to_right)
             .replace(R.id.frameLayout,DescriptionFragment(bookDescription))
             .addToBackStack("Favorite_Fragment")
             .commit()

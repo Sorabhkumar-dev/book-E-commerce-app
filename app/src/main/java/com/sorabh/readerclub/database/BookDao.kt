@@ -1,6 +1,5 @@
 package com.sorabh.readerclub.database
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.sorabh.readerclub.retrofit.BookDescription
 
